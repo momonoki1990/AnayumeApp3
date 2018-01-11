@@ -12,22 +12,34 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
-    
+
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/text_label"
-        android:layout_alignParentLeft="true"/>
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#00000000"
+        android:textColor="#ffffffff"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="345dp"
+        android:background="#ffffffff"/>
+
 
     <Button
         android:id="@+id/button_label"
         android:text="入力"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/edit_text"
-        android:layout_alignBottom="@+id/edit_text"/>
+        android:layout_alignBottom="@+id/edit_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 
 </RelativeLayout>
