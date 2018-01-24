@@ -1,45 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_label"
-        android:text="あなたの夢はなんですか？"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
-
     <EditText
         android:id="@+id/edit_text"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/text_label"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:background="#00000000"
-        android:textColor="#ffffffff"
-
-        />
-    <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="345dp"
-        android:background="#ffffffff"/>
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:hint="あなたの夢を入力してみましょう"
+        android:gravity="center"
+        android:background="#00000000"
+        android:textColor="#ffffffff" />
 
+    <View
+        android:id="@+id/view_label"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#aaa"
+        android:layout_below="@+id/edit_text" />
 
     <Button
         android:id="@+id/button_label"
         android:text="入力"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/edit_text"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/view_label"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"/>
 
 
 </RelativeLayout>
