@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/edit_text"
+        android:id="@+id/editText01Dream"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -21,10 +21,10 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="#aaa"
-        android:layout_below="@+id/edit_text" />
+        android:layout_below="@+id/editText01Dream" />
 
     <Button
-        android:id="@+id/button_label"
+        android:id="@+id/button01Regist"
         android:text="入力"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
