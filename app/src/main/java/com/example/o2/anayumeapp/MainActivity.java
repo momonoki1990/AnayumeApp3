@@ -47,6 +47,9 @@ public class MainActivity extends Activity {
 
                 // DBに登録
                 saveList();
+
+                Intent intent = new Intent(MainActivity.this, SubActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -95,9 +98,6 @@ public class MainActivity extends Activity {
             dbAdapter.closeDB();                   // DBを閉じる
 
             init();     // 初期値設定
-
-            Intent intent = new Intent(MainActivity.this, SubActivity.class);
-            startActivity(intent);
         }
     }
 

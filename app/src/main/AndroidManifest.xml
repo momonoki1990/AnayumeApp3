@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.o2.anayumeapp">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +24,11 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".Button1Activity" />
         <activity android:name=".Button2Activity" />
-        <activity android:name=".Button3Activity"></activity>
+        <activity android:name=".MyPreferenceActivity"></activity>
+        <receiver
+            android:name=".AlarmBroadcastReceiver"
+            android:process=":remote" >
+        </receiver>
     </application>
 
 </manifest>
