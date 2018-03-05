@@ -14,7 +14,8 @@
         android:hint="あなたの夢を入力してみましょう"
         android:gravity="center"
         android:background="#00000000"
-        android:textColor="#ffffffff" />
+        android:textColor="#ffffffff"
+        android:inputType="text"/>
 
     <View
         android:id="@+id/view_label"

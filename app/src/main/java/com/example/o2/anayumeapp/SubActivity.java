@@ -24,7 +24,7 @@ public class SubActivity extends Activity {
         textView = (TextView)findViewById(R.id.text_label);
         setMessage();
         handler.postDelayed(splashTask, 1000);
-        fadeinXml();
+        //fadeinXml();
 
     }
 

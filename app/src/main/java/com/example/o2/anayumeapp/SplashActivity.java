@@ -19,7 +19,7 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         textView = (TextView)findViewById(R.id.text_label);
-        handler.postDelayed(splashTask, 1000);
+        handler.postDelayed(splashTask, 3000);
         fadeinXml();
     }
 

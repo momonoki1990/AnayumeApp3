@@ -2,10 +2,10 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
-        android:title="通知の設定">
+        android:title="設定">
         <ListPreference
             android:key="list_pref"
-            android:title="繰り返しの設定"
+            android:title="通知の設定"
             android:summary="リストサマリー"
             android:entries="@array/list_entries"
             android:entryValues="@array/list_entryValues"

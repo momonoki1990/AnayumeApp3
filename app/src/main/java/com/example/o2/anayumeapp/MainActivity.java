@@ -5,12 +5,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Calendar;
@@ -47,9 +50,25 @@ public class MainActivity extends Activity {
 
                 // DBに登録
                 saveList();
+            }
+        });
 
-                Intent intent = new Intent(MainActivity.this, SubActivity.class);
-                startActivity(intent);
+        mEditText01Dream.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE){
+
+                    //    Enterが押されたときに行いたい処理
+                    // キーボードを非表示
+                    InputMethodManager inputMethodManager =
+                            (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
+
+                    // DBに登録
+                    saveList();
+                }
+                return false;
             }
         });
     }
@@ -98,6 +117,9 @@ public class MainActivity extends Activity {
             dbAdapter.closeDB();                   // DBを閉じる
 
             init();     // 初期値設定
+            //画面遷移
+            Intent intent = new Intent(MainActivity.this, SubActivity.class);
+            startActivity(intent);
         }
     }
 

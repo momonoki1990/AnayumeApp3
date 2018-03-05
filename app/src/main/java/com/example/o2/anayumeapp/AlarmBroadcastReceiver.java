@@ -8,9 +8,11 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
@@ -25,7 +27,6 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
 
         Log.d("AlarmBroadcastReceiver", "onReceive() pid=" + android.os.Process.myPid());
-        Log.d("なぜなんだー", "onReceive() pid=" + android.os.Process.myPid());
 
         Intent intents = new Intent(context, SplashActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intents, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -35,13 +36,13 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
                 // 通知の日時
                 .setWhen(System.currentTimeMillis())
                 // 通知のタイトル
-                .setContentTitle("通知だヨ！")
+                .setContentTitle("あなたの夢はなんですか？")
                 // 通知の詳細メッセージ
-                .setContentText("通知の詳しい内容をここに書きます。")
+                .setContentText("タップするとアプリを開きます。")
                 // 通知のアイコン
                 .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
                 // 通知を表示した瞬間、通知バーに表示するショートメッセージ
-                .setTicker("通知だヨ！")
+                .setTicker("あなたの夢はなんですか？")
                 // 通知をタップした時に使う PendingIntent
                 .setContentIntent(pendingIntent)
                 // この通知が未だ表示されていない時だけ、音やバイブレーション、ショートメッセージの表示を行う
@@ -56,9 +57,8 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
         // id の異なる通知は違うものとして扱われる。
         manager.notify(0, notification);
 
-        // トーストで設定されたことをを表示
-        Toast.makeText(context.getApplicationContext(),
-                "チェックーーー", Toast.LENGTH_SHORT).show();
+
+
 /*
         int requestCode = intent.getIntExtra("RequestCode", 0);
 
