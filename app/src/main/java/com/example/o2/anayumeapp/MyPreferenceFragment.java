@@ -104,7 +104,7 @@ public class MyPreferenceFragment extends PreferenceFragment
         // Calendarを使って現在の時間をミリ秒で取得
         calendar.setTimeInMillis(System.currentTimeMillis());
         // 5秒後に設定
-        calendar.add(Calendar.SECOND, date);
+        calendar.add(Calendar.MONTH, date);
 
         //明示的なBroadCast
         Intent intent = new Intent(getActivity().getApplicationContext(),
