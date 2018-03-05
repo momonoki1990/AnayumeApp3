@@ -23,12 +23,6 @@
         <activity android:name=".SubActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".Button1Activity" />
-        <activity android:name=".Button2Activity" />
-        <activity android:name=".MyPreferenceActivity"></activity>
-        <receiver
-            android:name=".AlarmBroadcastReceiver"
-            android:process=":remote" >
-        </receiver>
     </application>
 
 </manifest>
