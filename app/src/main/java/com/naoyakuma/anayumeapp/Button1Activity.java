@@ -1,4 +1,4 @@
-package com.example.o2.anayumeapp;
+package com.naoyakuma.anayumeapp;
 
 import android.app.Activity;
 import android.app.AlertDialog;

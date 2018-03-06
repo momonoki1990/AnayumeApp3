@@ -1,15 +1,16 @@
-package com.example.o2.anayumeapp;
+package com.naoyakuma.anayumeapp;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
-public class SplashActivity extends Activity {
+import java.util.Random;
+
+public class SubActivity extends Activity {
 
     private TextView textView;
     final Handler handler = new Handler();
@@ -17,10 +18,24 @@ public class SplashActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_sub);
         textView = (TextView)findViewById(R.id.text_label);
+        setMessage();
         handler.postDelayed(splashTask, 3000);
         fadeinXml();
+
+    }
+
+    private void setMessage() {
+        String[] messages = {
+                "良い夢ですね。",
+                "そうなんですね。",
+                "素敵ですね。"
+        };
+
+        Random randomGenerator = new Random();
+        int num = randomGenerator.nextInt(messages.length);
+        textView.setText(messages[num]);
     }
 
     @Override
@@ -31,7 +46,7 @@ public class SplashActivity extends Activity {
     private Runnable splashTask = new Runnable() {
         @Override
         public void run() {
-            Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+            Intent intent = new Intent(SubActivity.this,HomeActivity.class);
             startActivity(intent);
             finish();
         }

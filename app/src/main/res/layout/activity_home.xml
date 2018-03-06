@@ -26,7 +26,6 @@
             android:text="過去の夢"
             android:textSize="20sp"
             android:layout_width="110dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="30dp"/>
+            android:layout_height="50dp"/>
     </LinearLayout>
 </FrameLayout>

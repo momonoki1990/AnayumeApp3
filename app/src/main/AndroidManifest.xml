@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.o2.anayumeapp">
+    package="com.naoyakuma.anayumeapp">
 
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
@@ -12,17 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-        <activity android:name=".SplashActivity">
+        <activity android:name="com.naoyakuma.anayumeapp.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SubActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".Button1Activity" />
+        <activity android:name="com.naoyakuma.anayumeapp.MainActivity" />
+        <activity android:name="com.naoyakuma.anayumeapp.SubActivity" />
+        <activity android:name="com.naoyakuma.anayumeapp.HomeActivity" />
+        <activity android:name="com.naoyakuma.anayumeapp.Button1Activity" />
     </application>
 
 </manifest>
